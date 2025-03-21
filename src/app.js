@@ -2,17 +2,17 @@ import express from "express";
 import usuariosRoutes from "./routes/usuariosRoutes.js";
 import indexRoutes from "./routes/indexRoutes.js";
 
+// Importar puerto
+import { PORT } from "./config.js";
+
 // Crear un servidor express
 const app = express();
 
 app.use(express.json());
 
-// Puerto
-const port = 3000;
-
 // Escuchar en el puerto
-app.listen(port, () => {
-  console.log(`Funcionando en el puerto:  ${port}`);
+app.listen(PORT, () => {
+  console.log(`Funcionando en el puerto:  ${PORT}`);
 });
 
 // usuariosRoutes
