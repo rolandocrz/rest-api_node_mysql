@@ -10,11 +10,11 @@ const app = express();
 
 app.use(express.json());
 
-// Escuchar en el puerto
-app.listen(PORT, () => {
-  console.log(`Funcionando en el puerto:  ${PORT}`);
-});
-
 // usuariosRoutes
 app.use("/api", usuariosRoutes);
 app.use(indexRoutes);
+
+// Escuchar en el puerto
+app.listen(PORT, () => {
+  console.log(`Funcionando en el puerto: ${PORT}`);
+});
