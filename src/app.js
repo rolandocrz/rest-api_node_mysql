@@ -10,13 +10,24 @@ const app = express();
 
 app.use(express.json());
 
+app.use(express.json());
+
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, PATCH, DELETE");
+  res.header("Access-Control-Allow-Headers", "Content-Type");
+
+  // Manejar preflight requests
+  if (req.method === "OPTIONS") {
+    return res.sendStatus(200);
+  }
+
+  next();
+});
+
 // usuariosRoutes
 app.use("/api", usuariosRoutes);
 app.use(indexRoutes);
-
-import { DB_PORT, DB_HOST, DB_DATABASE, DB_USER, DB_PASS } from "./config.js";
-
-console.log(DB_PORT, DB_HOST, DB_DATABASE, DB_USER, DB_PASS);
 
 // Escuchar en el puerto
 app.listen(PORT, () => {
