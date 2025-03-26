@@ -16,22 +16,16 @@ let data = [
     sexo: "M",
   },
   {
-    nombre: "Juan Perez",
-    domicilio: "Mochis",
-    edad: 30,
+    nombre: "Jose Miguel",
+    domicilio: "Jabalies",
+    edad: 20,
     sexo: "M",
   },
   {
-    nombre: "Maria Lopez",
-    domicilio: "Topolobampo",
-    edad: 25,
-    sexo: "F",
-  },
-  {
-    nombre: "Ana Lopez",
-    domicilio: "Topolobampo",
-    edad: 25,
-    sexo: "F",
+    nombre: "Kevin Osuna",
+    domicilio: "Juarez",
+    edad: 20,
+    sexo: "M",
   },
 ];
 
