@@ -1,9 +1,11 @@
 import { Router } from "express";
-import { db } from "../controllers/indexController.js";
+import { data } from "../librerias.js";
 
 const router = Router();
 
 // Conexión a la base de datos (Prueba)
-router.get("/db", db);
+router.get("/alumnos", (req, res) => {
+  res.json(data);
+});
 
 export default router;
