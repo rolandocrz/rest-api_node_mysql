@@ -1,5 +1,5 @@
 import express from "express";
-import usuariosRoutes from "./routes/usuariosRoutes.js";
+import alumnosRoutes from "./routes/alumnosRoutes.js";
 import indexRoutes from "./routes/indexRoutes.js";
 
 // Importar puerto
@@ -26,7 +26,7 @@ app.use((req, res, next) => {
 });
 
 // usuariosRoutes
-app.use("/api", usuariosRoutes);
+app.use("/api", alumnosRoutes);
 app.use(indexRoutes);
 
 // Escuchar en el puerto
