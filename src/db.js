@@ -7,4 +7,5 @@ export const pool = createPool({
   password: DB_PASS,
   port: DB_PORT,
   database: DB_DATABASE,
+  dateStrings: true,
 });
